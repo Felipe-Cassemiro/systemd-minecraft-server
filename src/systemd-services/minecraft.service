@@ -1,0 +1,16 @@
+[Unit]
+Description=Minecraft Server Start
+After=network.target
+
+[Service]
+ExecStart=/home/{your-user}/minecraft-server/fabric-server-01/run.sh
+WorkingDirectory=/home/{your-user}/minecraft-server/fabric-server-01
+ExecStopPost=/home/{your-user}/minecraft-server/fabric-server-01/restart-watcher.sh
+User=root
+Group=root
+SuccessExitStatus=0 143
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
