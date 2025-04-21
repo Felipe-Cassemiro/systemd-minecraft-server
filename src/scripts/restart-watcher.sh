@@ -3,14 +3,14 @@
 SERVICE="minecraft.service"
 WATCHER="minecraft-watcher.service"
 
-# Espera até o Minecraft parar
-echo "Esperando o Minecraft parar..."
+# Wait for Minecraft to stop
+echo "Waiting for Minecraft to stop..."
 while systemctl is-active --quiet "$SERVICE"; do
     sleep 3
 done
 
-# Quando o Minecraft parar, reinicia o watcher
-echo "Minecraft parou. O watcher será iniciado em 20 segundos..."
+# When Minecraft stops, restart the watcher
+echo "Minecraft stopped. The watcher will start in 20 seconds..."
 
 sleep 20
 

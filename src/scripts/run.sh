@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Configurações de memória
-XMS=2G   # Memória inicial
-XMX=4G   # Memória máxima
+# Memory settings
+XMS=2G   # Initial memory
+XMX=4G   # Maximum memory
 
-# Nome do arquivo JAR do servidor Fabric
+# Name of the Fabric server JAR file
 FABRIC_JAR="fabric-server-launch.jar"
 
-# Mensagem ao iniciar
-echo "🔧 Iniciando servidor Fabric Minecraft 1.20.1..."
-echo "🧠 Memória alocada: Inicial = $XMS / Máxima = $XMX"
-echo "🚀 Executando $FABRIC_JAR"
+# Startup message
+echo "🔧 Starting Fabric Minecraft Server 1.20.1..."
+echo "🧠 Allocated Memory: Initial = $XMS / Maximum = $XMX"
+echo "🚀 Running $FABRIC_JAR"
 
-# Comando para iniciar o servidor
+# Command to start the server
 java -Xms$XMS -Xmx$XMX -jar $FABRIC_JAR nogui
 
-# Mensagem ao finalizar
-echo "🛑 Servidor encerrado."
+# Shutdown message
+echo "🛑 Server stopped."
